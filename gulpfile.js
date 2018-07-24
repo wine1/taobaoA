@@ -4,7 +4,7 @@ var path = require('path');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 // 压缩js文件
-var  uglify = require('gulp-uglify');
+// var  uglify = require('gulp-uglify');
 var compass = require( 'gulp-compass' );
 // Gulp plugin to run a webserver
 var connect = require('gulp-connect');
@@ -30,16 +30,16 @@ gulp.task("sass", function() {
         .pipe(gulp.dest("resource/css"))
 });
 // 压缩js文件
-gulp.task('js', function() {
-	gulp.src('source/js/*.js')
-		.pipe(uglify())
-		.pipe(rename('index.min.js'))
-		.pipe(gulp.dest('source/js'))
-});
+// gulp.task('js', function() {
+// 	gulp.src('source/js/*.js')
+// 		.pipe(uglify())
+// 		.pipe(rename('index.min.js'))
+// 		.pipe(gulp.dest('source/js'))
+// });
 gulp.task('watch', function () {
     gulp.watch('*.html',['html']);
     gulp.watch("sass/*.scss", ["sass"])
-    gulp.watch('js/*.js',['js'])
+    // gulp.watch('js/*.js',['js'])
 });
 
 gulp.task("connect", function() {
@@ -48,4 +48,4 @@ gulp.task("connect", function() {
     });
 });
 
-gulp.task('default', ['html','js','compass','watch','connect']);
+gulp.task('default', ['html','sass','watch','connect']);
