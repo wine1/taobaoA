@@ -260,4 +260,23 @@ body {
             }
         }
     }
+    .mid {
+        width: 1190px;
+        margin: 0 auto;
+        .wrap-goods {
+            width: 100%;
+            margin-top: 20px;
+            .goods {
+                display: inline-block;
+                width: 24%;
+                padding: 20px;
+                box-sizing: border-box;
+                a {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
