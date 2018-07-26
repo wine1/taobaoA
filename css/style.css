@@ -57,6 +57,7 @@ del, ins, u, s, a, a:hover {
   text-decoration: none; }
 
 body, textarea, input, button, select, keygen, legend {
+  vertical-align: middle;
   font: 12px/1.14 arial,\5b8b\4f53;
   color: #333;
   outline: 0; }
@@ -270,10 +271,38 @@ body {
       left: 10px;
       margin-top: 10px;
       margin-right: 65px;
-      background: #fff; }
+      background: #fff;
+      text-align: center; }
       body .container .main .right .member {
         width: 100%;
         text-align: center; }
+      body .container .main .right .jubao {
+        display: inline-block;
+        background-color: #ddd;
+        margin: 10px;
+        padding: 3px 10px;
+        text-align: center;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px; }
+      body .container .main .right .tab-menu {
+        height: 50px; }
+        body .container .main .right .tab-menu li {
+          display: inline-block;
+          width: 23%;
+          height: 50px;
+          line-height: 50px; }
+          body .container .main .right .tab-menu li:hover {
+            border: 1px solid #f40;
+            border-bottom: 1px solid #fff;
+            box-sizing: content-box; }
+          body .container .main .right .tab-menu li a {
+            width: 100%; }
+          body .container .main .right .tab-menu li .text-center {
+            border: 1px solid #f40;
+            display: none; }
   body .mid {
     width: 1190px;
     margin: 0 auto; }
@@ -386,13 +415,15 @@ body {
 
 .cart {
   width: 1190px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 70px; }
   .cart .clear {
     clear: both; }
   .cart .cart-top {
     margin-top: 10px;
     padding: 10px;
-    border-bottom: 1px solid #ddd; }
+    border-bottom: 1px solid #ddd;
+    overflow: hidden; }
     .cart .cart-top .cart-nav {
       float: left; }
       .cart .cart-top .cart-nav li {
@@ -402,7 +433,7 @@ body {
         height: 16px;
         font-weight: 700;
         font-size: 16px;
-        font-family: 'Hiragino Sans GB', 'Lantinghei SC', 'Microsoft Yahei', SimSun;
+        font-family: "Hiragino Sans GB", "Lantinghei SC", "Microsoft Yahei", SimSun;
         text-align: center; }
         .cart .cart-top .cart-nav li span {
           font-weight: 700;
@@ -419,9 +450,127 @@ body {
         background: #f40;
         color: #fff;
         line-height: 20px;
-        border-radius: 3px; }
+        border-radius: 3px;
+        cursor: pointer; }
         .cart .cart-top .settlement input:disabled {
-          background: #444;
+          background: #aaa;
           cursor: not-allowed; }
+  .cart .cart-table {
+    margin: 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left; }
+    .cart .cart-table li {
+      display: inline-block; }
+      .cart .cart-table li:first-of-type {
+        width: 15%; }
+      .cart .cart-table li:nth-of-type(2) {
+        width: 40%; }
+      .cart .cart-table li:nth-of-type(3) {
+        width: 10%; }
+      .cart .cart-table li:nth-of-type(4) {
+        width: 10%; }
+      .cart .cart-table li:nth-of-type(5) {
+        width: 10%; }
+      .cart .cart-table li:nth-of-type(6) {
+        width: 10%; }
+  .cart .shop {
+    margin-top: 15px; }
+    .cart .shop .shopname {
+      margin: 10px; }
+    .cart .shop .bundle {
+      border: 1px solid #ddd; }
+      .cart .shop .bundle .goodslist .goods {
+        border-bottom: 1px solid #ddd;
+        padding: 0 10px; }
+        .cart .shop .bundle .goodslist .goods:last-of-type {
+          border: 0; }
+        .cart .shop .bundle .goodslist .goods:hover li:nth-of-type(4) {
+          border: 1px dashed #ddd; }
+        .cart .shop .bundle .goodslist .goods li {
+          display: inline-block;
+          padding: 10px 0;
+          vertical-align: text-top;
+          cursor: pointer; }
+          .cart .shop .bundle .goodslist .goods li:first-of-type {
+            width: 3%;
+            padding-left: 5px; }
+          .cart .shop .bundle .goodslist .goods li:nth-of-type(2) {
+            width: 10%; }
+          .cart .shop .bundle .goodslist .goods li:nth-of-type(3) {
+            width: 20%; }
+          .cart .shop .bundle .goodslist .goods li:nth-of-type(4) {
+            width: 15%;
+            margin-right: 55px;
+            padding-bottom: 60px;
+            box-sizing: border-box;
+            color: #9c9c9c; }
+            .cart .shop .bundle .goodslist .goods li:nth-of-type(4):hover {
+              border: 1px dashed #f40; }
+          .cart .shop .bundle .goodslist .goods li:nth-of-type(5) {
+            width: 8%; }
+          .cart .shop .bundle .goodslist .goods li:nth-of-type(6) {
+            width: 13%; }
+            .cart .shop .bundle .goodslist .goods li:nth-of-type(6) p {
+              display: inline-block;
+              background-color: #ddd;
+              text-align: center; }
+              .cart .shop .bundle .goodslist .goods li:nth-of-type(6) p .reduce,
+              .cart .shop .bundle .goodslist .goods li:nth-of-type(6) p .sum {
+                display: inline-block;
+                width: 20px;
+                height: 16px;
+                background-color: #ddd;
+                cursor: pointer;
+                font-size: 16px;
+                color: #666;
+                padding-left: 5px; }
+              .cart .shop .bundle .goodslist .goods li:nth-of-type(6) p input {
+                width: 30px;
+                font-size: 16px;
+                color: #666;
+                text-align: center; }
+          .cart .shop .bundle .goodslist .goods li:nth-of-type(7) {
+            width: 8%;
+            color: #f40; }
+          .cart .shop .bundle .goodslist .goods li:nth-of-type(8) {
+            width: 10%; }
+
+.bott-nav {
+  position: fixed;
+  bottom: 0;
+  width: 1190px;
+  background: #ddd;
+  overflow: hidden;
+  height: 50px; }
+  .bott-nav .le li,
+  .bott-nav .ri li {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 50px;
+    font-size: 14px;
+    cursor: pointer; }
+    .bott-nav .le li span,
+    .bott-nav .ri li span {
+      font-size: 16px;
+      color: #f40;
+      font-weight: bold; }
+  .bott-nav .le {
+    float: left; }
+  .bott-nav .ri {
+    float: right; }
+    .bott-nav .ri li:last-of-type {
+      margin: 0; }
+    .bott-nav .ri input {
+      height: 53px;
+      width: 100px;
+      border: 0;
+      font-size: 22px;
+      background: #f40;
+      color: #fff;
+      cursor: pointer; }
+      .bott-nav .ri input:disabled {
+        background: #aaa;
+        cursor: not-allowed; }
 
 /*# sourceMappingURL=style.css.map */

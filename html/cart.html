@@ -29,6 +29,9 @@
 			</ul>
 			<ul class="nav-right">
 				<li>
+					<a href="./index.html">淘宝网首页</a>
+				</li>
+				<li>
 					<a href="javascript:;">我的淘宝</a>
 					<span class="mytaobao">已买到的
 						<br>我的足迹</span>
@@ -104,23 +107,26 @@
 				<div class="cart-top">
 					<ul class="cart-nav">
 						<li>全部商品
-							<span>56</span>
+							<span id="allnum"></span>
 						</li>
 						<li>降价商品
-							<span>7</span>
+							<span>0</span>
 						</li>
 					</ul>
 					<div class="settlement">
 						<p>已选商品（不含运费）
-							<span id="count">0.00</span>
+							<span class="count">0.00</span>
 						</p>
-						<input type="button" disabled value="结算">
+						<input type="button" name="jiesuan" disabled value="结算">
 					</div>
-					<div class="clear"></div>
+					<!-- <div class="clear"></div> -->
 				</div>
 				<ul class="cart-table">
 					<li>
-						<label class="quanxuan">全选</label>
+						<label class="quanxuan">
+							<input class="checkall" type="checkbox">
+							<span>全选</span>
+						</label>
 					</li>
 					<li>商品信息</li>
 					<li>单价</li>
@@ -129,19 +135,16 @@
 					<li>操作</li>
 				</ul>
 				<div class="shop">
-					<p>
-						<span class="shopquanxuan"></span>
-						<img src="" alt="">店铺：
+					<p class="shopname">
+						<input type="checkbox" class="ckeckshop" name=""> 店铺：
 						<span class="shopname">veromode官方旗舰店</span>
+						<span class="baoyou">一件包邮</span>
 					</p>
 					<div class="bundle">
-						<p>
-							<span class="baoyou">一件包邮</span>
-						</p>
 						<div class="goodslist">
 							<ul class="goods">
 								<li class="goods-check">
-									<input type="checkbox">
+									<input class="check" type="checkbox">
 								</li>
 								<li class="goods-img">
 									<img src="../img/veromoda.jpg" alt="">
@@ -150,10 +153,10 @@
 									<p>veromoda网纱五分袖连衣裙</p>
 									<span>
 										<a href="javascript:;">
-											<img src="" alt="">
+											<img src="../img/baozhang.png" alt="">
 										</a>
 										<a href="javascript:;">
-											<img src="" alt="">
+											<img src="../img/qitain.png" alt="">
 										</a>
 									</span>
 								</li>
@@ -165,15 +168,162 @@
 										<span>155/76A/XS</span>
 									</p>
 								</li>
-								<li class="goods-price">￥849.00</li>
+								<li class="goods-price">￥
+									<span class="price">849.00</span>
+								</li>
 								<li class="goods-amount">
 									<p>
 										<span class="reduce">-</span>
-										<input type="text">
+										<input type="text" class="shuliang" value="1">
 										<span class="sum">+</span>
 									</p>
 								</li>
-								<li class="goods-total">￥849</li>
+								<li class="goods-total">￥
+									<span class="total">849</span>
+								</li>
+								<li class="goods-operate">
+									<span class="move">移入收藏夹</span>
+									<span class="delete">删除</span>
+								</li>
+							</ul>
+							<ul class="goods">
+								<li class="goods-check">
+									<input class="check" type="checkbox">
+								</li>
+								<li class="goods-img">
+									<img src="../img/veromoda.jpg" alt="">
+								</li>
+								<li class="goods-name">
+									<p>veromoda网纱五分袖连衣裙</p>
+									<span>
+										<a href="javascript:;">
+											<img src="../img/baozhang.png" alt="">
+										</a>
+										<a href="javascript:;">
+											<img src="../img/qitain.png" alt="">
+										</a>
+									</span>
+								</li>
+								<li class="goods-details">
+									<p class="goods-color">颜色分类:
+										<span>C15斑比粉色</span>
+									</p>
+									<p class="goods-size">尺码：
+										<span>155/76A/XS</span>
+									</p>
+								</li>
+								<li class="goods-price">￥
+									<span class="price">849.00</span>
+								</li>
+								<li class="goods-amount">
+									<p>
+										<span class="reduce">-</span>
+										<input type="text" class="shuliang" value="1">
+										<span class="sum">+</span>
+									</p>
+								</li>
+								<li class="goods-total">￥
+									<span class="total">849</span>
+								</li>
+								<li class="goods-operate">
+									<span class="move">移入收藏夹</span>
+									<span class="delete">删除</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="shop">
+					<p class="shopname">
+						<input type="checkbox" class="ckeckshop" name=""> 店铺：
+						<span class="shopname">veromode官方旗舰店</span>
+						<span class="baoyou">一件包邮</span>
+					</p>
+					<div class="bundle">
+						<div class="goodslist">
+							<ul class="goods">
+								<li class="goods-check">
+									<input class="check" type="checkbox">
+								</li>
+								<li class="goods-img">
+									<img src="../img/veromoda.jpg" alt="">
+								</li>
+								<li class="goods-name">
+									<p>veromoda网纱五分袖连衣裙</p>
+									<span>
+										<a href="javascript:;">
+											<img src="../img/baozhang.png" alt="">
+										</a>
+										<a href="javascript:;">
+											<img src="../img/qitain.png" alt="">
+										</a>
+									</span>
+								</li>
+								<li class="goods-details">
+									<p class="goods-color">颜色分类:
+										<span>C15斑比粉色</span>
+									</p>
+									<p class="goods-size">尺码：
+										<span>155/76A/XS</span>
+									</p>
+								</li>
+								<li class="goods-price">￥
+									<span class="price">849.00</span>
+								</li>
+								<li class="goods-amount">
+									<p>
+										<span class="reduce">-</span>
+										<input type="text" class="shuliang" value="1">
+										<span class="sum">+</span>
+									</p>
+								</li>
+								<li class="goods-total">￥
+									<span class="total">849</span>
+								</li>
+								<li class="goods-operate">
+									<span class="move">移入收藏夹</span>
+									<span class="delete">删除</span>
+								</li>
+							</ul>
+							<ul class="goods">
+								<li class="goods-check">
+									<input class="check" type="checkbox">
+								</li>
+								<li class="goods-img">
+									<img src="../img/veromoda.jpg" alt="">
+								</li>
+								<li class="goods-name">
+									<p>veromoda网纱五分袖连衣裙</p>
+									<span>
+										<a href="javascript:;">
+											<img src="../img/baozhang.png" alt="">
+										</a>
+										<a href="javascript:;">
+											<img src="../img/qitain.png" alt="">
+										</a>
+									</span>
+								</li>
+								<li class="goods-details">
+									<p class="goods-color">颜色分类:
+										<span>C15斑比粉色</span>
+									</p>
+									<p class="goods-size">尺码：
+										<span>155/76A/XS</span>
+									</p>
+								</li>
+								<li class="goods-price">￥
+									<span class="price">849.00</span>
+								</li>
+								<li class="goods-amount">
+									<p>
+										<span class="reduce">-</span>
+										<input type="text" class="shuliang" value="1">
+										<span class="sum">+</span>
+									</p>
+								</li>
+								<li class="goods-total">￥
+									<span class="total">849</span>
+								</li>
 								<li class="goods-operate">
 									<span class="move">移入收藏夹</span>
 									<span class="delete">删除</span>
@@ -183,8 +333,178 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="bott-nav">
+				<ul class="le">
+					<li>
+						<input type="checkbox" class="checkall">全选</li>
+					<li id="delall">删除</li>
+					<li>清除失效宝贝</li>
+					<li>移入收藏夹</li>
+					<li>分享</li>
+				</ul>
+				<ul class="ri">
+					<li>已选商品
+						<span class="choosed">0</span>件</li>
+					<li>合计（不含运费）：
+						<span class="count">0.00</span>
+					</li>
+
+					<li>
+						<input type="button" name="jiesuan" disabled value="结算">
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
+
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			// 网页加载完成时执行
+			$('#allnum').text($('.goods').length);
+			// 改变全部商品数量
+			function changeAllnum() {
+				$('#allnum').text($('.goods').length);
+			}
+
+			// 全选和全不选切换
+			$('.checkall').click(function () {
+				if (this.checked) {
+					$('input[type="checkbox"').prop('checked', true);
+					$('.quanxuan>span').text('全不选');
+				} else {
+					$('input[type="checkbox"').prop('checked', false);
+					$('.quanxuan>span').text('全选');
+				}
+			});
+			// 同一家店的全选和全不选切换
+			$('.ckeckshop').click(function () {
+				if (this.checked) {
+					$(this).parents('.shop').find('.check').prop('checked', true);
+				} else {
+					$(this).parents('.shop').find('.check').prop('checked', false);
+				}
+				count();
+				// var chk = 0;
+				// var chknum = $(this).parents('.shop').find('.check').length;
+				// var check = $(this).parents('.shop').find('.check');
+				// check.each(function () {  
+				// 	if(check.prop("checked")) {
+				// 		chk++;
+				// 	}
+				// 	if(chk == chknum) {
+				// 		$(this).prop("checked",true);
+				// 	}else {
+				// 		$(this).prop("checked",false);
+				// 	}
+				// })
+			});
+			// 当有任意选项为不选时全选状态改变
+			$('input[type=checkbox]').click(function () {
+				count();
+				allchk();
+
+			})
+
+			function allchk() {
+				var chknum = $(".check").length; //选项总个数
+				var chk = 0;
+				$(".check").each(function () {
+					if ($(this).prop("checked") == true) {
+						chk++;
+					}
+				});
+				if (chknum == chk) { //全选
+					$(".checkall").prop("checked", true);
+					$('.quanxuan>span').text('全不选');
+				} else { //不全选
+					$(".checkall").prop("checked", false);
+					$('.quanxuan>span').text('全选');
+				}
+			}
+			// 被选择的商品总金额和总数量改变
+			function count() {
+				var count = 0;
+				var n = 0;
+				$(".check").each(function () {
+					if ($(this).prop('checked')) {
+						var total = $(this).parent().siblings().find('.total').text();
+						console.log(total);
+						count = count + parseInt(total);
+						n++;
+					}
+					console.log(n);
+					$('.choosed').text(n);
+					console.log(count);
+					$('.count').text(count);
+					if (count > 0) {
+						$('input[type=button]').prop('disabled', false);
+					} else {
+						$('input[type=button]').prop('disabled', true);
+					}
+				});
+			}
+
+			// 增加商品数量
+			$('.sum').click(function () {
+				var value = $(this).prev().val();
+				value++;
+				$(this).prev().val(value);
+				var price = $(this).parent().parent().prev().children('span').text();
+				$(this).parent().parent().next().children('span').text(value * price);
+				count();
+			});
+			// 减少商品数量
+			$('.reduce').click(function () {
+				var value = $(this).next().val();
+				if (value > 1) {
+					value--;
+					$(this).next().val(value);
+					var price = $(this).parent().parent().prev().children('span').text();
+					$(this).parent().parent().next().children('span').text(value * price);
+				}
+				count();
+			});
+			$('.shuliang').change(function () {
+				var value = $(this).val();
+				var price = $(this).parent().parent().prev().children('span').text();
+				$(this).parent().parent().next().children('span').text(value * price);
+			})
+			// 删除商品
+			$('.delete').on('click', function () {
+				var del = $(this).parents('ul');
+				del.remove();
+				changeAllnum();
+				count();
+				delshop();
+				// var shop = $(this).parents('.shop');
+				// while (shop.find('ul').length === 0)
+				// 	shop.remove();
+			})
+
+			function delshop() {
+				$('.shop').each(function () {
+					if ($(this).find('.check').length == 0) {
+						$(this).remove();
+					}
+				})
+			}
+
+			$('#delall').click(function () {
+				$('.check').each(function () {
+					if (this.checked) {
+						$(this).parents('.goods').remove();
+					}
+				})
+				count();
+				changeAllnum();
+
+				delshop();
+			});
+		})
+	</script>
+	<!-- <script src="../js/cart.js"></script> -->
 </body>
 
 </html>

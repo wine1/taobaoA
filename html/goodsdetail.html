@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>Demo</title>
-		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
-		<script type="text/javascript" src="js/main.js" ></script>
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
-		<link rel="stylesheet" href="../css/style.css" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-    	</head>
-	<body>
-		<div class="nav">
-			<div class="wrap-nav">
-				<ul class="nav-left">
-					<li>中国大陆</li>
-					<li class="color-red">
-						<a href="login.html">亲，请登录</a>
-					</li>
-					<li>
-						<a href="reg.html">免费注册</a>
-					</li>
-					<li>
-						<a href="javascript:;">手机逛淘宝</a>
-					</li>
-				</ul>
-				<ul class="nav-right">
-					<li>
-						<a href="javascript:;">我的淘宝</a>
-						<span class="mytaobao">已买到的
-							<br>我的足迹</span>
-					</li>
-					<li>
-						<i class="fa fa-shopping-cart"></i>
-						<a href="cart.html">购物车</a>
-					</li>
-					<li>
-						<i class="fa fa-star"></i>
-						<a href="javascript:;">收藏夹</a>
-					</li>
-					<li>
-						<a href="javascript:;">商品分类</a>
-					</li>
-					<li>
-						<a href="javascript:;">卖家中心</a>
-					</li>
-					<li>
-						<a href="javascript:;">联系客服</a>
-					</li>
-					<li>
-						<i class="fa fa-list"></i>
-						<a href="javascript:;">网站导航</a>
-					</li>
-				</ul>
-	
-				<!-- <div class="gouwuche">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Demo</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="../css/style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div class="nav">
+		<div class="wrap-nav">
+			<ul class="nav-left">
+				<li>中国大陆</li>
+				<li class="color-red">
+					<a href="login.html">亲，请登录</a>
+				</li>
+				<li>
+					<a href="reg.html">免费注册</a>
+				</li>
+				<li>
+					<a href="javascript:;">手机逛淘宝</a>
+				</li>
+			</ul>
+			<ul class="nav-right">
+				<li>
+					<a href="./index.html">淘宝网首页</a>
+				</li>
+				<li>
+					<a href="javascript:;">我的淘宝</a>
+					<span class="mytaobao">已买到的
+						<br>我的足迹</span>
+				</li>
+				<li>
+					<i class="fa fa-shopping-cart"></i>
+					<a href="cart.html">购物车</a>
+				</li>
+				<li>
+					<i class="fa fa-star"></i>
+					<a href="javascript:;">收藏夹</a>
+				</li>
+				<li>
+					<a href="javascript:;">商品分类</a>
+				</li>
+				<li>
+					<a href="javascript:;">卖家中心</a>
+				</li>
+				<li>
+					<a href="javascript:;">联系客服</a>
+				</li>
+				<li>
+					<i class="fa fa-list"></i>
+					<a href="javascript:;">网站导航</a>
+				</li>
+			</ul>
+
+			<!-- <div class="gouwuche">
 					<p>您的购物车里还没有任何宝贝
 						<span>查看我的购物车</span>
 					</p>
@@ -71,11 +76,11 @@
 					<li>卖家客服</li>
 					<li>消费者客服</li>
 				</div> -->
-			</div>
 		</div>
-			<!-- <div class="subheader">
+	</div>
+	<!-- <div class="subheader">
 				<!--圣杯布局-->
-				<!-- <div class="searchbar"> 
+	<!-- <div class="searchbar"> 
 					<form action="" method="get">
 						<input  type="search" class="search" />
 						<input type="button" class="btn" value="搜索"/>
@@ -93,49 +98,32 @@
 	<div class="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-6">
-					<img src="img/h4-slide7.png">
+				<div class="pic">
+					<img src="../img/veromoda.jpg">
 				</div>
-				<div class="col-lg-6 col-md-6">
-					<h2>商品名称是什么</h2>
-					<h2>这个商品要花多少钱</h2>
+				<div class="mes">
+					<p>
+						<span class="name">veromoda连衣裙</span>
+						<span class="">100</span>
+					</p>
 					<p>这个商品到底是什么鬼啊麻辣鸡这里要写描述，很多很多描述</p>
 					<form class="buy">
-						<input type="button" name="add" value="加入购物车">
-						<input type="button" name="buy" value="直接购买">
+						<input type="button" name="add" id="add" value="加入购物车">
+						<input type="button" name="buy" id="bug" value="直接购买">
 					</form>
 
 				</div>
 			</div>
 		</div>
-
-
 	</div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			
-<div class="footer">
+	<div class="footer">
 		<div class="footer-ensure">
-			<a href="#nowhere"><img src="img/QQ截图20171015172208.jpg"/></a>
+			<a href="#nowhere">
+				<img src="img/QQ截图20171015172208.jpg" />
+			</a>
 		</div>
 		<div calss="footer-desc">
 			<div class="desc">
@@ -149,7 +137,9 @@
 			<div class="desc">
 				<h3>天猫保障</h3>
 				<ul>
-					<li>发票保障</li><li>售后规则</li><li>缺货赔偿</li>
+					<li>发票保障</li>
+					<li>售后规则</li>
+					<li>缺货赔偿</li>
 				</ul>
 			</div>
 			<div class="desc">
@@ -174,18 +164,36 @@
 		<div class="copyright">
 			<div class="white-link">
 				<ul>
-					<li><a href="#nowhere">关于天猫</a></li>
-					<li><a href="#nowhere">帮助中心</a></li>
-					<li><a href="#nowhere">开放平台</a></li>
-					<li><a href="#nowhere">诚聘英才</a></li>
-					<li><a href="#nowhere">联系我们</a></li>
-					<li><a href="#nowhere">网站合作</a></li>
-					<li><a href="#nowhere">法律声明</a></li>
-					<li><a href="#nowhere">知识产权</a></li>
-					<li><a href="#nowhere">廉政举报</a></li>
+					<li>
+						<a href="#nowhere">关于天猫</a>
+					</li>
+					<li>
+						<a href="#nowhere">帮助中心</a>
+					</li>
+					<li>
+						<a href="#nowhere">开放平台</a>
+					</li>
+					<li>
+						<a href="#nowhere">诚聘英才</a>
+					</li>
+					<li>
+						<a href="#nowhere">联系我们</a>
+					</li>
+					<li>
+						<a href="#nowhere">网站合作</a>
+					</li>
+					<li>
+						<a href="#nowhere">法律声明</a>
+					</li>
+					<li>
+						<a href="#nowhere">知识产权</a>
+					</li>
+					<li>
+						<a href="#nowhere">廉政举报</a>
+					</li>
 				</ul>
 			</div>
-			
+
 			<div class="white-link">
 				<a href="#nowhere">阿里巴巴集团</a>|
 				<a href="#nowhere">淘宝网</a>|
@@ -198,9 +206,11 @@
 				<a href="#nowhere">高德</a>
 			</div>
 		</div>
-	
-</div>
 
+	</div>
 
-	</body>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/cart.js"></script>
+</body>
+
 </html>

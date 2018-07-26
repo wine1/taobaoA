@@ -19,9 +19,7 @@
 		$(this).removeClass('hover');
 		$('#showbox').hide();
 	});
-
-	// var rollset = $('#right-slide');
-	// var offset = rollset.offset();
+	
 	$(window).scroll(function() {
 		var scrollTop = $(window).scrollTop();
 		if(scrollTop >180) {
