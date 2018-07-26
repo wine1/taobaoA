@@ -337,7 +337,7 @@
 			<div class="bott-nav">
 				<ul class="le">
 					<li>
-						<input type="checkbox" class="checkall">全选</li>
+						<input type="checkbox" class="checkall"><span id="xuanbuxuan">全选</span></li>
 					<li id="delall">删除</li>
 					<li>清除失效宝贝</li>
 					<li>移入收藏夹</li>
@@ -372,10 +372,10 @@
 			$('.checkall').click(function () {
 				if (this.checked) {
 					$('input[type="checkbox"').prop('checked', true);
-					$('.quanxuan>span').text('全不选');
+					$('.quanxuan>span,#xuanbuxuan').text('全不选');
 				} else {
 					$('input[type="checkbox"').prop('checked', false);
-					$('.quanxuan>span').text('全选');
+					$('.quanxuan>span,#xuanbuxuan').text('全选');
 				}
 			});
 			// 同一家店的全选和全不选切换
@@ -417,10 +417,10 @@
 				});
 				if (chknum == chk) { //全选
 					$(".checkall").prop("checked", true);
-					$('.quanxuan>span').text('全不选');
+					$('.quanxuan>span,#xuanbuxuan').text('全不选');
 				} else { //不全选
 					$(".checkall").prop("checked", false);
-					$('.quanxuan>span').text('全选');
+					$('.quanxuan>span,#xuanbuxuan').text('全选');
 				}
 			}
 			// 被选择的商品总金额和总数量改变
@@ -432,7 +432,7 @@
 						var total = $(this).parent().siblings().find('.total').text();
 						console.log(total);
 						count = count + parseInt(total);
-						n++;
+						++n;
 					}
 					console.log(n);
 					$('.choosed').text(n);
@@ -466,10 +466,12 @@
 				}
 				count();
 			});
+			// 商品数量改变时总价变化
 			$('.shuliang').change(function () {
 				var value = $(this).val();
 				var price = $(this).parent().parent().prev().children('span').text();
 				$(this).parent().parent().next().children('span').text(value * price);
+				count();
 			})
 			// 删除商品
 			$('.delete').on('click', function () {
@@ -478,11 +480,9 @@
 				changeAllnum();
 				count();
 				delshop();
-				// var shop = $(this).parents('.shop');
-				// while (shop.find('ul').length === 0)
-				// 	shop.remove();
 			})
 
+			// 当一个商店的商品为空时删除店铺信息
 			function delshop() {
 				$('.shop').each(function () {
 					if ($(this).find('.check').length == 0) {
@@ -490,16 +490,18 @@
 					}
 				})
 			}
-
+			// 底部导航栏批量删除
 			$('#delall').click(function () {
 				$('.check').each(function () {
 					if (this.checked) {
 						$(this).parents('.goods').remove();
 					}
 				})
+				$('.choosed').text(0);
+				$('.count').text(0);
+				$('input[type=button]').prop('disabled', true);
 				count();
 				changeAllnum();
-
 				delshop();
 			});
 		})

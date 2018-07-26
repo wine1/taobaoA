@@ -188,7 +188,8 @@ body {
   body .container .main {
     width: 1190px;
     margin: 0 auto;
-    background: #fff; }
+    background: #fff;
+    overflow: hidden; }
     body .container .main .left {
       float: left;
       background: #fff; }
@@ -413,6 +414,36 @@ body {
 .clear {
   clear: both; }
 
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #fff;
+  text-align: center; }
+  .footer .footer-ensure img {
+    width: 1000px; }
+  .footer .footer-desc {
+    width: 1190px;
+    margin: 0 auto; }
+    .footer .footer-desc .desc {
+      display: inline-block;
+      width: 20%; }
+      .footer .footer-desc .desc h3 {
+        font-size: 18px; }
+      .footer .footer-desc .desc ul li {
+        font-size: 16px; }
+  .footer .copyright .white-link ul li {
+    display: inline-block; }
+    .footer .copyright .white-link ul li a {
+      color: #fff; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  padding-bottom: 300px; }
+
 .cart {
   width: 1190px;
   margin: 0 auto;
@@ -513,13 +544,15 @@ body {
             width: 13%; }
             .cart .shop .bundle .goodslist .goods li:nth-of-type(6) p {
               display: inline-block;
+              height: 22px;
               background-color: #ddd;
               text-align: center; }
               .cart .shop .bundle .goodslist .goods li:nth-of-type(6) p .reduce,
               .cart .shop .bundle .goodslist .goods li:nth-of-type(6) p .sum {
                 display: inline-block;
                 width: 20px;
-                height: 16px;
+                height: 22px;
+                line-height: 18px;
                 background-color: #ddd;
                 cursor: pointer;
                 font-size: 16px;
@@ -550,8 +583,9 @@ body {
     line-height: 50px;
     font-size: 14px;
     cursor: pointer; }
-    .bott-nav .le li span,
-    .bott-nav .ri li span {
+    .bott-nav .le li .count, .bott-nav .le li .choosed,
+    .bott-nav .ri li .count,
+    .bott-nav .ri li .choosed {
       font-size: 16px;
       color: #f40;
       font-weight: bold; }
@@ -573,4 +607,7 @@ body {
         background: #aaa;
         cursor: not-allowed; }
 
+.main-gooddetail {
+  width: 1190px;
+  margin: 0 auto; }
 /*# sourceMappingURL=style.css.map */

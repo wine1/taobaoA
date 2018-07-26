@@ -144,6 +144,7 @@ body {
             width: 1190px;
             margin: 0 auto;
             background: #fff;
+            overflow: hidden;
             .left {
                 float: left;
                 background: #fff;
@@ -209,9 +210,9 @@ body {
                             border-radius: 10px;
                             background-color: rgba( 255, 255, 255, 0.5); // .swiper-pagination-bullet {
                             //     background-color: #ff5000;
-                            // }
-                            .swiper-button-prev {}
-                            .swiper-button-next {}
+                            // // }
+                            // .swiper-button-prev {}
+                            // .swiper-button-next {}
                         }
                     }
                     #swiper-container1 {
@@ -232,8 +233,8 @@ body {
                             background-color: rgba( 255, 255, 255, 0.5); // .swiper-pagination-bullet {
                             //     background-color: #ff5000;
                             // }
-                            .swiper-button-prev {}
-                            .swiper-button-next {}
+                            // .swiper-button-prev {}
+                            // .swiper-button-next {}
                         }
                     }
                     .mingpin {

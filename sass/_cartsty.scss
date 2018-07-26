@@ -128,13 +128,15 @@
                             width: 13%;
                             p {
                                 display: inline-block;
+                                height: 22px;
                                 background-color: #ddd;
                                 text-align: center;
                                 .reduce,
                                 .sum {
                                     display: inline-block;
                                     width: 20px;
-                                    height: 16px;
+                                    height: 22px;
+                                    line-height: 18px;
                                     background-color: #ddd;
                                     cursor: pointer;
                                     font-size: 16px;
@@ -178,7 +180,7 @@
             line-height: 50px;
             font-size: 14px;
             cursor: pointer;
-            span {
+            .count,.choosed {
                 font-size: 16px;
                 color: #f40;
                 font-weight: bold;

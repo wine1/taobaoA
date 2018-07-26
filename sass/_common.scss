@@ -118,7 +118,54 @@
     top: 42px;
 }
 
-
 .clear {
     clear: both;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+    text-align: center;
+    .footer-ensure {
+        img {
+            width: 1000px;
+        }
+    }
+    .footer-desc {
+        width: 1190px;
+        margin: 0 auto;
+        .desc {
+            display: inline-block;
+            width: 20%;
+            h3 {
+                font-size: 18px;
+            }
+            ul {
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .copyright {
+        .white-link {
+            ul {
+                li {
+                    display: inline-block;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    padding-bottom: 300px;
 }
