@@ -271,9 +271,58 @@
 						</span>
 						<i class="fa fa-angle-right"></i>
 					</li>
-					<div id="showbox">
-						balabala
+					<div class="wrap-showbox">
+						<div class="showbox">
+							1
+						</div>
+						<div class="showbox">
+							2
+						</div>
+						<div class="showbox">
+							3
+						</div>
+						<div class="showbox">
+							4
+						</div>
+						<div class="showbox">
+							5
+						</div>
+						<div class="showbox">
+
+						</div>
+						<div class="showbox">
+
+						</div>
+						<div class="showbox">
+
+						</div>
+						<div class="showbox">
+
+						</div>
+						<div class="showbox">
+
+						</div>
+						<div class="showbox">
+
+						</div>
+						<div class="showbox">
+
+						</div>
+						<div class="showbox">
+
+						</div>
+						<div class="showbox">
+
+						</div>
+						<div class="showbox">
+
+						</div>
+						<div class="showbox">
+
+						</div>
+
 					</div>
+
 				</ul>
 
 				<!-- aside end -->
@@ -567,23 +616,17 @@
 		(function () {
 
 			'use strict';
-			// $('.search-nav li').mouseenter(function () { 
-			// 	$(this).css('background-color','pink');
-			//  });
-			//  $('.search-nav li').mouseout(function () { 
-			// 	$(this).css('background-color','#fff');
-			//  });
 			$('.search-nav li').click(function () {
 				$(this).siblings().removeClass('actived');
 				$(this).addClass('actived');
 			});
 			$('#slidebar li').mouseenter(function () {
 				$(this).addClass('hover');
-				$('#showbox').show();
+				$('.showbox').eq($(this).index()).show();
 			});
 			$('#slidebar li').mouseleave(function () {
 				$(this).removeClass('hover');
-				$('#showbox').hide();
+				$('.showbox').eq($(this).index()).hide();
 			});
 			// 侧边栏滑动事件
 			$(window).scroll(function () {

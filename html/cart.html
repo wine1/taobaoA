@@ -407,11 +407,43 @@
 			$('input[type=checkbox]').click(function () {
 				count();
 				allchk();
+				var chk = 0;
+				var click = $(this).parents('.shop').find('.check');
+				console.log(click)
+				var chknum = click.length;
+				click.each(function () {  
+					if($(this).prop('checked') == true) {
+						chk ++;
+						console.log(chk)
+					}
+				})
+				console.log(chk)
+				if (chknum == chk) { //全选
+					$(this).parents('.shop').find(".ckeckshop").prop("checked", true);
+				} else { //不全选
+					$(this).parents('.shop').find(".ckeckshop").prop("checked", false);
+				}
 
 			})
 
 			function allchk() {
 				var chknum = $(".check").length; //选项总个数
+				var chk = 0;
+				$(".check").each(function () {
+					if ($(this).prop("checked") == true) {
+						chk++;
+					}
+				});
+				if (chknum == chk) { //全选
+					$(".checkall").prop("checked", true);
+					$('.quanxuan>span,#xuanbuxuan').text('全不选');
+				} else { //不全选
+					$(".checkall").prop("checked", false);
+					$('.quanxuan>span,#xuanbuxuan').text('全选');
+				}
+			}
+			function shopchk() {
+				var chknum = $(".shop .check").length; //选项总个数
 				var chk = 0;
 				$(".check").each(function () {
 					if ($(this).prop("checked") == true) {
@@ -433,13 +465,10 @@
 				$(".check").each(function () {
 					if ($(this).prop('checked')) {
 						var total = $(this).parent().siblings().find('.total').text();
-						console.log(total);
 						count = count + parseInt(total);
 						++n;
 					}
-					console.log(n);
 					$('.choosed').text(n);
-					console.log(count);
 					$('.count').text(count);
 					if (count > 0) {
 						$('input[type=button]').prop('disabled', false);
@@ -509,7 +538,6 @@
 			});
 		})
 	</script>
-	<!-- <script src="../js/cart.js"></script> -->
 </body>
 
 </html>

@@ -145,6 +145,8 @@ body {
           border-radius: 18px 0 0 18px;
           border: 0; }
         body .container .wrap-search .search .wrap-input #search-btn {
+          position: absolute;
+          margin-top: 7px;
           font-size: 20px;
           color: #fff;
           cursor: pointer; }
@@ -219,7 +221,7 @@ body {
           color: #ff5000; }
           body .container .main .left .slidebar .hover a {
             color: #ff5000; }
-        body .container .main .left .slidebar #showbox {
+        body .container .main .left .slidebar .showbox {
           display: none;
           position: relative;
           left: 188px;
@@ -467,6 +469,7 @@ body {
 .footer {
   position: absolute;
   width: 100%;
+  bottom: 0;
   background-color: #fff;
   text-align: center; }
   .footer .footer-ensure img {

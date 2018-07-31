@@ -88,9 +88,11 @@ body {
                         border: 0;
                     }
                     #search-btn {
+                        position: absolute;
+                        margin-top: 7px;
                         font-size: 20px;
                         color: #fff;
-                        cursor: pointer; // line-height: 40px;
+                        cursor: pointer; 
                     }
                 }
                 p {
@@ -181,7 +183,7 @@ body {
                             color: #ff5000;
                         }
                     }
-                    #showbox {
+                    .showbox {
                         display: none;
                         position: relative;
                         left: 188px;
