@@ -26,6 +26,11 @@
                     display: none;
                 }
             }
+            .hoverd {
+                border-left: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                box-sizing: border-box;
+            }
             .color-red {
                 a {
                     color: red;
@@ -34,6 +39,43 @@
         }
         .nav-right {
             float: right;
+        }
+        .gouwuche {
+            display: none;
+            position: absolute;
+            border: 1px solid #ccc;
+            margin-left: 794px;
+            z-index: 11;
+            width: 120px;
+            line-height: 15px;
+            color: #6c6c6c;
+            p {
+                span {
+                    display: block;
+                }
+            }
+        }
+        .shoucangjia,.maijia,.kefu {
+            display: none;
+            position: absolute;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            z-index: 11;
+            width: 65px;
+            line-height: 15px;
+            li {
+                color: #6c6c6c;
+                text-align: center;
+            }
+        }
+        .shoucangjia {
+            margin-left: 859px;
+        }
+        .maijia {
+            margin-left: 990px;
+        }
+        .kefu {
+            margin-left: 1050px;
         }
     }
 }
@@ -124,8 +166,7 @@
 
 .footer {
     position: absolute;
-    width: 100%;
-    bottom: 0;
+    width: 100%; // bottom: 0;
     background-color: #fff;
     text-align: center;
     .footer-ensure {
@@ -162,9 +203,11 @@
         }
     }
 }
+
 html {
     height: 100%;
 }
+
 body {
     height: 100%;
     padding-bottom: 300px;

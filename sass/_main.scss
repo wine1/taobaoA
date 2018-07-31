@@ -151,6 +151,7 @@ body {
                 .slidebar {
                     width: 188px;
                     border: 1px solid #ff5000;
+                    border-top: 0;
                     li {
                         overflow: hidden;
                         line-height: 32px;
@@ -187,7 +188,7 @@ body {
                         width: 690px;
                         height: 447px; // height: 518px;
                         border: 1px solid #ff5000;
-                        margin-top: -449px;
+                        margin-top: -450px;
                         background: #fff;
                         z-index: 10;
                     }
@@ -273,23 +274,44 @@ body {
                 }
                 .tab-menu {
                     height: 50px;
-                    
                     li {
                         display: inline-block;
-                        width: 23%;
+                        width: 57px;
                         height: 50px;
                         line-height: 50px;
-                        &:hover {
-                            border: 1px solid #f40;
-                            border-bottom: 1px solid #fff;
-                            box-sizing: content-box;
-                        }
+                        border: 1px solid #fff;
+                        box-sizing: border-box;
                         a {
                             width: 100%;
                         }
-                        .text-center {
-                            border: 1px solid #f40;
-                            display: none;
+                    }
+                    .active {
+                        position: relative;
+                        border: 1px solid #f40;
+                        border-bottom: 1px solid #fff;
+                        margin-top: 1px;
+                        background-color: #fff;
+                        box-sizing: border-box;
+                        z-index: 11;
+                    }
+                }
+                .wrap-box {
+                    .text-center {
+                        display: none;
+                        position: absolute;
+                        width: 100%;
+                        border: 1px solid #f40;
+                        height: 150px;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        background: #fff;
+                        &:first-of-type {
+                            display: block;
+                        }
+                        input {
+                            display: block;
+                            width: 150px;
+                            margin: 20px auto;
                         }
                     }
                 }

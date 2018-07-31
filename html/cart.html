@@ -3,9 +3,6 @@
 
 <head>
 	<meta charset="utf-8" />
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>shopping cart</title>
@@ -59,7 +56,8 @@
 				</li>
 			</ul>
 
-			<!-- <div class="gouwuche">
+			<div class="wrap-hi">
+				<div class="gouwuche">
 					<p>您的购物车里还没有任何宝贝
 						<span>查看我的购物车</span>
 					</p>
@@ -75,13 +73,15 @@
 				<div class="kefu">
 					<li>卖家客服</li>
 					<li>消费者客服</li>
-				</div> 
+				</div>
+			</div>
+
 		</div>
 	</div>
 	<!-- 顶部导航栏结束 -->
-			<!-- <div class="wrap-search">
+	<!-- <div class="wrap-search">
 		<!--圣杯布局-->
-			<!-- <div class="search">
+	<!-- <div class="search">
 			<ul class="search-nav">
 				<li>宝贝</li>
 				<li>天猫</li>
@@ -103,262 +103,265 @@
 	</div>
 	圣杯布局结束  -->
 
-			<div class="cart">
-				<div class="cart-top">
-					<ul class="cart-nav">
-						<li>全部商品
-							<span id="allnum"></span>
+	<div class="cart">
+		<div class="cart-top">
+			<ul class="cart-nav">
+				<li>全部商品
+					<span id="allnum"></span>
+				</li>
+				<li>降价商品
+					<span>0</span>
+				</li>
+			</ul>
+			<div class="settlement">
+				<p>已选商品（不含运费）
+					<span class="count">0.00</span>
+				</p>
+				<input type="button" name="jiesuan" disabled value="结算">
+			</div>
+			<!-- <div class="clear"></div> -->
+		</div>
+		<ul class="cart-table">
+			<li>
+				<label class="quanxuan">
+					<input class="checkall" type="checkbox">
+					<span>全选</span>
+				</label>
+			</li>
+			<li>商品信息</li>
+			<li>单价</li>
+			<li>数量</li>
+			<li>金额</li>
+			<li>操作</li>
+		</ul>
+		<div class="shop">
+			<p class="shopname">
+				<input type="checkbox" class="ckeckshop" name=""> 店铺：
+				<span class="shopname">veromode官方旗舰店</span>
+				<span class="baoyou">一件包邮</span>
+			</p>
+			<div class="bundle">
+				<div class="goodslist">
+					<ul class="goods">
+						<li class="goods-check">
+							<input class="check" type="checkbox">
 						</li>
-						<li>降价商品
-							<span>0</span>
+						<li class="goods-img">
+							<img src="../img/veromoda.jpg" alt="">
+						</li>
+						<li class="goods-name">
+							<p>veromoda网纱五分袖连衣裙</p>
+							<span>
+								<a href="javascript:;">
+									<img src="../img/baozhang.png" alt="">
+								</a>
+								<a href="javascript:;">
+									<img src="../img/qitain.png" alt="">
+								</a>
+							</span>
+						</li>
+						<li class="goods-details">
+							<p class="goods-color">颜色分类:
+								<span>C15斑比粉色</span>
+							</p>
+							<p class="goods-size">尺码：
+								<span>155/76A/XS</span>
+							</p>
+						</li>
+						<li class="goods-price">￥
+							<span class="price">849.00</span>
+						</li>
+						<li class="goods-amount">
+							<p>
+								<span class="reduce">-</span>
+								<input type="text" class="shuliang" value="1">
+								<span class="sum">+</span>
+							</p>
+						</li>
+						<li class="goods-total">￥
+							<span class="total">849</span>
+						</li>
+						<li class="goods-operate">
+							<span class="move">移入收藏夹</span>
+							<span class="delete">删除</span>
 						</li>
 					</ul>
-					<div class="settlement">
-						<p>已选商品（不含运费）
-							<span class="count">0.00</span>
-						</p>
-						<input type="button" name="jiesuan" disabled value="结算">
-					</div>
-					<!-- <div class="clear"></div> -->
-				</div>
-				<ul class="cart-table">
-					<li>
-						<label class="quanxuan">
-							<input class="checkall" type="checkbox">
-							<span>全选</span>
-						</label>
-					</li>
-					<li>商品信息</li>
-					<li>单价</li>
-					<li>数量</li>
-					<li>金额</li>
-					<li>操作</li>
-				</ul>
-				<div class="shop">
-					<p class="shopname">
-						<input type="checkbox" class="ckeckshop" name=""> 店铺：
-						<span class="shopname">veromode官方旗舰店</span>
-						<span class="baoyou">一件包邮</span>
-					</p>
-					<div class="bundle">
-						<div class="goodslist">
-							<ul class="goods">
-								<li class="goods-check">
-									<input class="check" type="checkbox">
-								</li>
-								<li class="goods-img">
-									<img src="../img/veromoda.jpg" alt="">
-								</li>
-								<li class="goods-name">
-									<p>veromoda网纱五分袖连衣裙</p>
-									<span>
-										<a href="javascript:;">
-											<img src="../img/baozhang.png" alt="">
-										</a>
-										<a href="javascript:;">
-											<img src="../img/qitain.png" alt="">
-										</a>
-									</span>
-								</li>
-								<li class="goods-details">
-									<p class="goods-color">颜色分类:
-										<span>C15斑比粉色</span>
-									</p>
-									<p class="goods-size">尺码：
-										<span>155/76A/XS</span>
-									</p>
-								</li>
-								<li class="goods-price">￥
-									<span class="price">849.00</span>
-								</li>
-								<li class="goods-amount">
-									<p>
-										<span class="reduce">-</span>
-										<input type="text" class="shuliang" value="1">
-										<span class="sum">+</span>
-									</p>
-								</li>
-								<li class="goods-total">￥
-									<span class="total">849</span>
-								</li>
-								<li class="goods-operate">
-									<span class="move">移入收藏夹</span>
-									<span class="delete">删除</span>
-								</li>
-							</ul>
-							<ul class="goods">
-								<li class="goods-check">
-									<input class="check" type="checkbox">
-								</li>
-								<li class="goods-img">
-									<img src="../img/veromoda.jpg" alt="">
-								</li>
-								<li class="goods-name">
-									<p>veromoda网纱五分袖连衣裙</p>
-									<span>
-										<a href="javascript:;">
-											<img src="../img/baozhang.png" alt="">
-										</a>
-										<a href="javascript:;">
-											<img src="../img/qitain.png" alt="">
-										</a>
-									</span>
-								</li>
-								<li class="goods-details">
-									<p class="goods-color">颜色分类:
-										<span>C15斑比粉色</span>
-									</p>
-									<p class="goods-size">尺码：
-										<span>155/76A/XS</span>
-									</p>
-								</li>
-								<li class="goods-price">￥
-									<span class="price">849.00</span>
-								</li>
-								<li class="goods-amount">
-									<p>
-										<span class="reduce">-</span>
-										<input type="text" class="shuliang" value="1">
-										<span class="sum">+</span>
-									</p>
-								</li>
-								<li class="goods-total">￥
-									<span class="total">849</span>
-								</li>
-								<li class="goods-operate">
-									<span class="move">移入收藏夹</span>
-									<span class="delete">删除</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="shop">
-					<p class="shopname">
-						<input type="checkbox" class="ckeckshop" name=""> 店铺：
-						<span class="shopname">veromode官方旗舰店</span>
-						<span class="baoyou">一件包邮</span>
-					</p>
-					<div class="bundle">
-						<div class="goodslist">
-							<ul class="goods">
-								<li class="goods-check">
-									<input class="check" type="checkbox">
-								</li>
-								<li class="goods-img">
-									<img src="../img/veromoda.jpg" alt="">
-								</li>
-								<li class="goods-name">
-									<p>veromoda网纱五分袖连衣裙</p>
-									<span>
-										<a href="javascript:;">
-											<img src="../img/baozhang.png" alt="">
-										</a>
-										<a href="javascript:;">
-											<img src="../img/qitain.png" alt="">
-										</a>
-									</span>
-								</li>
-								<li class="goods-details">
-									<p class="goods-color">颜色分类:
-										<span>C15斑比粉色</span>
-									</p>
-									<p class="goods-size">尺码：
-										<span>155/76A/XS</span>
-									</p>
-								</li>
-								<li class="goods-price">￥
-									<span class="price">849.00</span>
-								</li>
-								<li class="goods-amount">
-									<p>
-										<span class="reduce">-</span>
-										<input type="text" class="shuliang" value="1">
-										<span class="sum">+</span>
-									</p>
-								</li>
-								<li class="goods-total">￥
-									<span class="total">849</span>
-								</li>
-								<li class="goods-operate">
-									<span class="move">移入收藏夹</span>
-									<span class="delete">删除</span>
-								</li>
-							</ul>
-							<ul class="goods">
-								<li class="goods-check">
-									<input class="check" type="checkbox">
-								</li>
-								<li class="goods-img">
-									<img src="../img/veromoda.jpg" alt="">
-								</li>
-								<li class="goods-name">
-									<p>veromoda网纱五分袖连衣裙</p>
-									<span>
-										<a href="javascript:;">
-											<img src="../img/baozhang.png" alt="">
-										</a>
-										<a href="javascript:;">
-											<img src="../img/qitain.png" alt="">
-										</a>
-									</span>
-								</li>
-								<li class="goods-details">
-									<p class="goods-color">颜色分类:
-										<span>C15斑比粉色</span>
-									</p>
-									<p class="goods-size">尺码：
-										<span>155/76A/XS</span>
-									</p>
-								</li>
-								<li class="goods-price">￥
-									<span class="price">849.00</span>
-								</li>
-								<li class="goods-amount">
-									<p>
-										<span class="reduce">-</span>
-										<input type="text" class="shuliang" value="1">
-										<span class="sum">+</span>
-									</p>
-								</li>
-								<li class="goods-total">￥
-									<span class="total">849</span>
-								</li>
-								<li class="goods-operate">
-									<span class="move">移入收藏夹</span>
-									<span class="delete">删除</span>
-								</li>
-							</ul>
-						</div>
-					</div>
+					<ul class="goods">
+						<li class="goods-check">
+							<input class="check" type="checkbox">
+						</li>
+						<li class="goods-img">
+							<img src="../img/veromoda.jpg" alt="">
+						</li>
+						<li class="goods-name">
+							<p>veromoda网纱五分袖连衣裙</p>
+							<span>
+								<a href="javascript:;">
+									<img src="../img/baozhang.png" alt="">
+								</a>
+								<a href="javascript:;">
+									<img src="../img/qitain.png" alt="">
+								</a>
+							</span>
+						</li>
+						<li class="goods-details">
+							<p class="goods-color">颜色分类:
+								<span>C15斑比粉色</span>
+							</p>
+							<p class="goods-size">尺码：
+								<span>155/76A/XS</span>
+							</p>
+						</li>
+						<li class="goods-price">￥
+							<span class="price">849.00</span>
+						</li>
+						<li class="goods-amount">
+							<p>
+								<span class="reduce">-</span>
+								<input type="text" class="shuliang" value="1">
+								<span class="sum">+</span>
+							</p>
+						</li>
+						<li class="goods-total">￥
+							<span class="total">849</span>
+						</li>
+						<li class="goods-operate">
+							<span class="move">移入收藏夹</span>
+							<span class="delete">删除</span>
+						</li>
+					</ul>
 				</div>
 			</div>
-
-			<div class="bott-nav">
-				<ul class="le">
-					<li>
-						<input type="checkbox" class="checkall"><span id="xuanbuxuan">全选</span></li>
-					<li id="delall">删除</li>
-					<li>清除失效宝贝</li>
-					<li>移入收藏夹</li>
-					<li>分享</li>
-				</ul>
-				<ul class="ri">
-					<li>已选商品
-						<span class="choosed">0</span>件</li>
-					<li>合计（不含运费）：
-						<span class="count">0.00</span>
-					</li>
-
-					<li>
-						<input type="button" name="jiesuan" disabled value="结算">
-					</li>
-				</ul>
+		</div>
+		<div class="shop">
+			<p class="shopname">
+				<input type="checkbox" class="ckeckshop" name=""> 店铺：
+				<span class="shopname">veromode官方旗舰店</span>
+				<span class="baoyou">一件包邮</span>
+			</p>
+			<div class="bundle">
+				<div class="goodslist">
+					<ul class="goods">
+						<li class="goods-check">
+							<input class="check" type="checkbox">
+						</li>
+						<li class="goods-img">
+							<img src="../img/veromoda.jpg" alt="">
+						</li>
+						<li class="goods-name">
+							<p>veromoda网纱五分袖连衣裙</p>
+							<span>
+								<a href="javascript:;">
+									<img src="../img/baozhang.png" alt="">
+								</a>
+								<a href="javascript:;">
+									<img src="../img/qitain.png" alt="">
+								</a>
+							</span>
+						</li>
+						<li class="goods-details">
+							<p class="goods-color">颜色分类:
+								<span>C15斑比粉色</span>
+							</p>
+							<p class="goods-size">尺码：
+								<span>155/76A/XS</span>
+							</p>
+						</li>
+						<li class="goods-price">￥
+							<span class="price">849.00</span>
+						</li>
+						<li class="goods-amount">
+							<p>
+								<span class="reduce">-</span>
+								<input type="text" class="shuliang" value="1">
+								<span class="sum">+</span>
+							</p>
+						</li>
+						<li class="goods-total">￥
+							<span class="total">849</span>
+						</li>
+						<li class="goods-operate">
+							<span class="move">移入收藏夹</span>
+							<span class="delete">删除</span>
+						</li>
+					</ul>
+					<ul class="goods">
+						<li class="goods-check">
+							<input class="check" type="checkbox">
+						</li>
+						<li class="goods-img">
+							<img src="../img/veromoda.jpg" alt="">
+						</li>
+						<li class="goods-name">
+							<p>veromoda网纱五分袖连衣裙</p>
+							<span>
+								<a href="javascript:;">
+									<img src="../img/baozhang.png" alt="">
+								</a>
+								<a href="javascript:;">
+									<img src="../img/qitain.png" alt="">
+								</a>
+							</span>
+						</li>
+						<li class="goods-details">
+							<p class="goods-color">颜色分类:
+								<span>C15斑比粉色</span>
+							</p>
+							<p class="goods-size">尺码：
+								<span>155/76A/XS</span>
+							</p>
+						</li>
+						<li class="goods-price">￥
+							<span class="price">849.00</span>
+						</li>
+						<li class="goods-amount">
+							<p>
+								<span class="reduce">-</span>
+								<input type="text" class="shuliang" value="1">
+								<span class="sum">+</span>
+							</p>
+						</li>
+						<li class="goods-total">￥
+							<span class="total">849</span>
+						</li>
+						<li class="goods-operate">
+							<span class="move">移入收藏夹</span>
+							<span class="delete">删除</span>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
 
+	<div class="bott-nav">
+		<ul class="le">
+			<li>
+				<input type="checkbox" class="checkall">
+				<span id="xuanbuxuan">全选</span>
+			</li>
+			<li id="delall">删除</li>
+			<li>清除失效宝贝</li>
+			<li>移入收藏夹</li>
+			<li>分享</li>
+		</ul>
+		<ul class="ri">
+			<li>已选商品
+				<span class="choosed">0</span>件</li>
+			<li>合计（不含运费）：
+				<span class="count">0.00</span>
+			</li>
+
+			<li>
+				<input type="button" name="jiesuan" disabled value="结算">
+			</li>
+		</ul>
+	</div>
+	</div>
+	</div>
+
 	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/main.js"></script>
 	<script type="text/javascript">
 		$(function () {
 			// 网页加载完成时执行

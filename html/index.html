@@ -57,23 +57,26 @@
 				</li>
 			</ul>
 
-			<!-- <div class="gouwuche">
-				<p>您的购物车里还没有任何宝贝
-					<span>查看我的购物车</span>
-				</p>
+			<div class="wrap-hi">
+				<div class="gouwuche">
+					<p>您的购物车里还没有任何宝贝
+						<span>查看我的购物车</span>
+					</p>
+				</div>
+				<div class="shoucangjia">
+					<li>收藏的宝贝</li>
+					<li>收藏的店铺</li>
+				</div>
+				<div class="maijia">
+					<li>卖出的宝贝</li>
+					<li>免费开店</li>
+				</div>
+				<div class="kefu">
+					<li>卖家客服</li>
+					<li>消费者客服</li>
+				</div>
 			</div>
-			<div class="shoucangjia">
-				<li>收藏的宝贝</li>
-				<li>收藏的店铺</li>
-			</div>
-			<div class="maijia">
-				<li>卖出的宝贝</li>
-				<li>免费开店</li>
-			</div>
-			<div class="kefu">
-				<li>卖家客服</li>
-				<li>消费者客服</li>
-			</div> -->
+
 		</div>
 	</div>
 	<!-- 顶部导航栏结束 -->
@@ -275,7 +278,7 @@
 
 				<!-- aside end -->
 				<div class="center">
-					<div class="swiper-container">
+					<div id="swiper-container" class="swiper-container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<img src="https://aecpm.alicdn.com/simba/img/TB183NQapLM8KJjSZFBSutJHVXa.jpg" />
@@ -342,39 +345,39 @@
 				<ul class="tab-menu">
 					<li class="active">
 						<a href="#" class="one">游戏</a>
-						<div class="text-center">
-							<input type="text" placeholder="游戏" />
-							<input type="text" placeholder="金额" />
-							<input type="button" value="充值" />
-
-						</div>
 					</li>
 					<li>
 						<a href="#" class="two">话费</a>
-						<div class="text-center">
-							<input type="text" placeholder="号码" />
-							<input type="text" placeholder="金额" />
-							<input type="button" value="充值" />
-						</div>
-					</li>
-					<li>
-						<a href="#" class="three">旅行</a>
-						<div class="fh5co-content-inner text-center">
-							<input type="text" placeholder="出发地" />
-							<input type="text" placeholder="目的地" />
-							<input type="text" placeholder="出发时间" />
-							<input type="button" value="查询" />
-						</div>
 					</li>
 					<li>
 						<a href="#" class="four">保险</a>
-						<div class="fh5co-content-inner text-center">
-							<input type="text" placeholder="热门" />
-							<input type="text" placeholder="险种" />
-							<input type="button" value="查询" />
-						</div>
+					</li>
+					<li>
+						<a href="#" class="three">旅行</a>
 					</li>
 				</ul>
+				<div class="wrap-box">
+					<div class="text-center">
+						<input type="text" placeholder="游戏" />
+						<input type="text" placeholder="金额" />
+						<input type="button" value="充值" />
+					</div>
+					<div class="text-center">
+						<input type="text" placeholder="号码" />
+						<input type="text" placeholder="金额" />
+						<input type="button" value="充值" />
+					</div>
+					<div class="text-center">
+						<input type="text" placeholder="热门" />
+						<input type="text" placeholder="险种" />
+						<input type="button" value="查询" />
+					</div>
+					<div class="text-center">
+						<input type="text" placeholder="出发" />
+						<input type="text" placeholder="到达" />
+						<input type="button" value="查询" />
+					</div>
+				</div>
 
 				<div class="clear"></div>
 			</div>
@@ -543,7 +546,7 @@
 	<script type="text/javascript" src="../js/swiper-4.3.3.min.js"></script>
 	<script type="text/javascript" src="../mock.js"></script>
 	<script>
-		var mySwiper1 = new Swiper('.swiper-container', '#swiper-container1', {
+		var mySwiper1 = new Swiper('#swiper-container', {
 			direction: 'horizontal',
 			autoplay: true,
 			loop: true,
@@ -552,7 +555,7 @@
 				el: '.swiper-pagination',
 			},
 		});
-		var mySwiper2 = new Swiper('.swiper-container', '#swiper-container1', {
+		var mySwiper2 = new Swiper('#swiper-container1', {
 			direction: 'horizontal',
 			autoplay: true,
 			loop: true,
@@ -561,6 +564,58 @@
 				el: '.swiper-pagination',
 			},
 		});
+		(function () {
+
+			'use strict';
+			// $('.search-nav li').mouseenter(function () { 
+			// 	$(this).css('background-color','pink');
+			//  });
+			//  $('.search-nav li').mouseout(function () { 
+			// 	$(this).css('background-color','#fff');
+			//  });
+			$('.search-nav li').click(function () {
+				$(this).siblings().removeClass('actived');
+				$(this).addClass('actived');
+			});
+			$('#slidebar li').mouseenter(function () {
+				$(this).addClass('hover');
+				$('#showbox').show();
+			});
+			$('#slidebar li').mouseleave(function () {
+				$(this).removeClass('hover');
+				$('#showbox').hide();
+			});
+			// 侧边栏滑动事件
+			$(window).scroll(function () {
+				var scrollTop = $(window).scrollTop();
+				if (scrollTop > 180) {
+					$('.wrap-hidden').show();
+				} else {
+					$('.wrap-hidden').hide();
+				}
+				if (scrollTop > 240) {
+					$('#right-slide').addClass('fixed');
+				} else {
+					$('#right-slide').removeClass('fixed');
+				}
+				if (scrollTop > 800) {
+					$('#scrolltop').show();
+				} else {
+					$('#scrolltop').hide();
+				}
+			});
+			// 点击回到顶部
+			$('#scrolltop').click(function () {
+				$('html,body').stop().animate({
+					scrollTop: 0
+				}, 300);
+			})
+			// tab栏切换
+			$('.tab-menu li').hover(function () {
+				$(this).addClass('active').siblings().removeClass('active');
+				$('.wrap-box .text-center').eq($(this).index()).show().siblings().hide();
+			})
+		}());
 	</script>
 
 </body>
