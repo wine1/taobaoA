@@ -1,1 +1,5 @@
 # StroeWeb
+
+# npm install
+
+# gulp
